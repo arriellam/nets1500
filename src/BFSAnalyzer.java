@@ -1,4 +1,4 @@
 //can put the algos here
-public class ShortestPath {
+public class BFSAnalyzer {
     
 }
