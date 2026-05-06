@@ -19,7 +19,7 @@ public class ClusteringAnalyzer {
 
     //Randomly samples 10,000 nodes
     private List<Integer> chooseSampleNodes() {
-        List<Integer> nodes = new ArrayList<>(graph.graph.keySet());
+        List<Integer> nodes = new ArrayList<>(graph.getGraph().keySet());
         Collections.shuffle(nodes, new Random());
         return nodes.subList(0, Math.min(SAMPLE_SIZE, nodes.size()));
     }
@@ -28,14 +28,14 @@ public class ClusteringAnalyzer {
     private void buildAdjacencySets() {
         Set<Integer> sampleSet = new HashSet<>(sampleNodes);
         //Visit every edge and store outgoing edges
-        for (int node : graph.graph.keySet()) {
+        for (int node : graph.getGraph().keySet()) {
             outNeighbors.put(node, new HashSet<>());
             if (sampleSet.contains(node)) {
                 inNeighbors.put(node, new HashSet<>());
             }
         }
         //Store incoming edges for sampled nodes
-        for (Map.Entry<Integer, ArrayList<Integer>> entry : graph.graph.entrySet()) {
+        for (Map.Entry<Integer, ArrayList<Integer>> entry : graph.getGraph().entrySet()) {
             int u = entry.getKey();
             for (int v : entry.getValue()) {
                 if (u != v) {

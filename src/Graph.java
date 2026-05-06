@@ -39,6 +39,10 @@ public class Graph {
         return nodes;
     }
 
+    public Map<Integer, ArrayList<Integer>> getGraph() {
+        return graph;
+    }
+
     public Map<Integer, Integer> computeInDegrees() {
         Map<Integer, Integer> inDegrees = new HashMap<>();
 

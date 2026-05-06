@@ -22,6 +22,22 @@ public class App {
         // limit BFS max depth  and trials for social graph due to its larger size
         socialGraph.bfsAnalysis("Social Graph", 100, 15);
 
-        // Clustering analysis (placeholder for now)
+        // Clustering analysis
+        ClusteringAnalyzer mentionsClustering = new ClusteringAnalyzer(mentionsGraph);
+        ClusteringAnalyzer socialClustering = new ClusteringAnalyzer(socialGraph);
+        ClusteringAnalyzer retweetClustering = new ClusteringAnalyzer(retweetGraph);
+        ClusteringAnalyzer replyClustering = new ClusteringAnalyzer(replyGraph);
+
+        System.out.println("Mentions Graph Clustering:");
+        mentionsClustering.printResults();
+        System.out.println();
+        System.out.println("Social Graph Clustering:");
+        socialClustering.printResults();
+        System.out.println();
+        System.out.println("Retweet Graph Clustering:");
+        retweetClustering.printResults();
+        System.out.println();
+        System.out.println("Reply Graph Clustering:");
+        replyClustering.printResults();
     }
 }
