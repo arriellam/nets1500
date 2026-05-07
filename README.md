@@ -6,6 +6,8 @@ Nets 1500 Final Project
 
 **Authors:** Sheila Bukenya, Evan Grove, Arriella Mafuta
 
+NOTE: The Summary Report is in attached in this repository as well.
+
 ## Overview
 
 Our project is an empirical analysis of the SNAP Higgs Twitter dataset. We compare four different twitter networks, the follower (social) network, retweet network, reply network and mention network. And each network is represented as a directed weightless graph where users are the nodes and the interactions are the edges. The goal of our project is to understand how different types of relationships create different network structures.
