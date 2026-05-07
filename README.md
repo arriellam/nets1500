@@ -44,8 +44,7 @@ After setup, the repository should contain these files:
 
 ## Run
 
-Compile and run the App class.
-
+Clone this repository in vscode. Compile and run the App class. Results are printed in the terminal.
 
 ## File Details
 
